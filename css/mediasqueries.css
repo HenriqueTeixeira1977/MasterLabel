@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 0px) and (max-width: 1023px){
+
+    body{
+        background: rgb(230, 230, 230);
+    }
+    header nav{background: rgb(0, 0, 0);
+        height: 170px;
+        margin: auto;        
+    }
+    header nav{background: red;
+        margin: auto;
+        width: 70%;
+        height: 70px;
+    }
+    header nav .logo a h1{ background: greenyellow;
+        font-size: var(--mbl-titulo-h1);
+    }
+    header nav .logo a h3{ background: rebeccapurple;
+        font-size: 1rem;
+    }
+    header nav .menu{ background-color: rgb(0, 255, 170);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+    header nav #burguer{
+        display: block;         
+    }
+    header nav .menu ul { background:rgb(255, 0, 0);
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        max-width: 90%;
+        width: 100%;
+        /*background:rgb(255, 255, 255);*/
+        flex-direction: column;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        display: none;
+    }
+    header nav .menu ul li  a{background: rgba(255, 0, 0, 0.084);
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 0px 0;
+        padding: 0px 0 ;
+        line-height: 100px;
+        font-size: 2em;
+    }
+
+    header nav #btn1{
+        display: none;
+    }
+
+
+    /*   ----------  SECTION HOME  ----------  */
+    .home{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }  
+    .home aside{
+        width: 100%;
+        height: 40%;
+    }
+    .home aside img{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    }
+    .home article{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .home article h1 {
+        font-size: 3rem;
+    }
+    .home article h2 {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+    .home article p {
+        font-size: 1.3rem;
+        line-height: 20px;
+    }
+    .home #btn-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        padding: 0 20px 5px 15px;
+    }
+    
+    /*   ----------  SECTION SOBRE  ----------  */
+    .empresa {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+    }
+    .empresa article{background: rgb(255, 255, 255);
+        width: 90%;
+        height: 100%;
+    }
+    .empresa aside{
+        width: 90%;
+    }
+    .empresa aside img {
+        width: 100%;
+    }
+
+
+
+
+    footer {
+        background: rgb(0, 0, 166);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 50px;
+        color: white;
+        font-size: 10px;
+        text-align: center;    
+    }
+}
+
