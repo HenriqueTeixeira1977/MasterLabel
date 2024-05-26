@@ -38,7 +38,7 @@ header nav{
     left: 0;
     top: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
     position: fixed;
 }
 nav {
@@ -49,7 +49,7 @@ nav {
     margin: auto;
     width: 100%;
     padding: 0 7%;
-    transition: all .2s ease;
+    transition: all .3s ease;
 }
 nav #burguer {
     display: none;
@@ -69,42 +69,45 @@ nav .logo h3 {
     color: var(--grena);
 
 }
+
 nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 nav ul li a{
-    margin: 0 3px;
-    font-size: 1rem;
+    margin: 0 7px;
+    font-size: 1.2rem;
     color: var(--preto);
     font-weight: 300;
 }
 nav ul li a:hover{
-    color: var(--grena);
-    transition: all .5s ease;
+    color: #855353;
+    border-bottom: var(--grena) solid 2px;
+    transition: all .1s ease;
 }
-.menu #btn1 {
-    background-color: #BE2A29;
+.menu {
+    display: flex;
+}
+.menu .btn1 a{
+    background-color: var(--grena);
     margin-left: 10px;
-    padding: 5px 20px;
+    padding: 5px 30px;
     color: var(--branco);
     font-size: 1rem;
-    text-align: center;
-    align-items: center;
-    border: .5px solid var(--branco);
     border-radius: 5px;
 }
-.menu #btn1:hover {
-    background: var(--azul);
+.menu .btn1 a:hover {
+    background: green;
     transition: all .5s ease;
 }
-header nav.sticky{
+
+header nav.sticky{background: #ff000000;
     padding: 0px 10%;
-    background: var(--azul);
+    /*background: var(--azul);*/
     transition: all .45s ease;
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;  
     color: var(--branco);
     border-bottom: #BE2A29 solid 5px;
@@ -119,14 +122,19 @@ header nav.sticky .logo h3{
 header nav.sticky .logo span {
     color: var(--branco);
 }
-header nav.sticky ul li a{
+header nav.sticky .menu ul li a{
     color: var(--branco);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
-header nav.sticky ul li a:hover{
-    color: var(--grena);
-    font-size: 1rem;
+header nav.sticky .menu ul li a:hover{
+    color: #dadada;
+    border-bottom: #ffffff solid 1px;
+    transition: all .1s ease;
 }
+
+
+
+
 /*  ++++++++++++++++++++++++++++  SEÇÃO MAIN +++++++++++++++++++++++++++++++  */
 main{background: rgba(255, 0, 0, 0);
     display: flex;
@@ -197,42 +205,42 @@ main{background: rgba(255, 0, 0, 0);
     transition: all .5s ease;
 }
 /*  ++++++++++++++++++++++++++++  SEÇÃO PRODUTOS +++++++++++++++++++++++++++++++  */
-.produtos {background: rgba(47, 99, 255, 0);
+.produtos {background: #c7c7c7;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     padding-top: 60px;
 }
 .produtos .title h2{background: rgba(143, 143, 11, 0);
-    padding: 30px 0 20px;
+    padding: 30px 0x;
     font-size: 3rem;
     text-align: center;
 }
-.produtos .container{background: rgba(255, 0, 0, 0);
+.produtos .container{background: rgba(255, 0, 0, 0.449);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 500px;
+    height: 600px;
     margin: 10px 10%;
     border: #00000000 solid 1px;
 }
-.produtos .container .card{background: rgba(223, 223, 223, 0);
+.produtos .container .card{background: rgb(255, 255, 255);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 23%;
-    height: 450px;
-    max-width: 350px;
+    width: 50%;
+    height: 500px;
+    max-width: 300px;
     margin: 10px;
-    padding: 10px;
+    padding: 30px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.507);
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.2);
 }
 .produtos .container .card img{background: #006eff00;
     height: 180px;
@@ -265,21 +273,67 @@ main{background: rgba(255, 0, 0, 0);
 
 }
 /*  ++++++++++++++++++++++++++++  SEÇÃO SERVICOS  +++++++++++++++++++++++++++++++  */
-.servicos {
-    background: rgb(242, 242, 242);
-    padding-top: 100px;
+.servicos {background: rgba(0, 0, 0, 0.467);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
+    padding-top: 60px;
+}
+.servicos .container{background: rgba(255, 0, 0, 0.421);
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicos .container article{background: rgba(255, 255, 0, 0);
+    width: 50%;
+}
+.servicos .container aside{background: rgba(0, 128, 0, 0);
+    width: 50%;
 }
 /*  ++++++++++++++++++++++++++++  SEÇÃO SERVICOS  +++++++++++++++++++++++++++++++  */
-.beneficios {
-    background: rgb(242, 242, 242);
-    padding-top: 100px;
+.beneficios {background: rgba(242, 242, 242, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
+    padding-top: 60px;
 }
-.depoimentos {
-    background: rgb(242, 242, 242);
-    padding-top: 100px;
+.beneficios .container{background: rgba(255, 0, 0, 0);
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beneficios .container article{background: rgba(255, 255, 0, 0);
+    width: 50%;
+}
+.beneficios .container aside{background: rgba(0, 128, 0, 0);
+    width: 50%;
+}
+/*  ++++++++++++++++++++++++++++  SEÇÃO DEPOIMENTOS  +++++++++++++++++++++++++++++++  */
+.depoimentos {background: rgba(242, 242, 242, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
+    padding-top: 60px;
+}
+.depoimentos .container{background: rgba(255, 0, 0, 0);
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.depoimentos .container article{background: rgba(255, 255, 0, 0);
+    width: 50%;
+}
+.depoimentos .container aside{background: rgba(0, 128, 0, 0);
+    width: 50%;
 }
 /*  ++++++++++++++++++++++++++++  SEÇÃO SOBRE  +++++++++++++++++++++++++++++++  */
 .empresa {
@@ -293,7 +347,18 @@ main{background: rgba(255, 0, 0, 0);
     margin: auto;
     padding-bottom: 50px;
 }
-.empresa article{
+.empresa .container{
+    background: rgb(230, 230, 230);
+    padding-top: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.empresa .container article{
     width: 40%;
     height: 80%;
     display: flex;
@@ -302,20 +367,20 @@ main{background: rgba(255, 0, 0, 0);
     flex-direction: column;
     padding: 20px;    
 }
-.empresa article h3{
+.empresa .container article h3{
     font-size: 2em;
     margin-bottom: 20px;
 }
-.empresa article h1 {
+.empresa .container article h1 {
     font-size: 3em;
     margin-bottom: 20px;
 }
-.empresa article p{
+.empresa .container article p{
     font-size: 1.2em;
     text-align: justify;
     margin-bottom: 20px;
 }
-.empresa article a{
+.empresa .container article a{
     margin-top: 50px;
     color: var(--branco);
     width: 50%;
@@ -324,7 +389,7 @@ main{background: rgba(255, 0, 0, 0);
     background: var(--grena);
     border-radius: 5px;
 }
-.empresa aside{
+.empresa .container aside{
     width: 40%;
     height: 80%;
     display: flex;
@@ -333,17 +398,47 @@ main{background: rgba(255, 0, 0, 0);
     padding: 20px;
 }
 /*  ++++++++++++++++++++++++++++  SEÇÃO ORCAMENTO  +++++++++++++++++++++++++++++++  */
-.orcamento {
-    background: greenyellow;
-    padding-top: 100px;
+.orcamento {background: rgba(172, 255, 47, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
+    padding-top: 60px;
+}
+.orcamento .container{background: rgba(255, 0, 0, 0);
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orcamento .container article{background: rgba(255, 255, 0, 0);
+    width: 50%;
+}
+.orcamento .container aside{background: rgba(0, 128, 0, 0);
+    width: 50%;
 }
 
 /*  ++++++++++++++++++++++++++++  SEÇÃO CONTATOS  +++++++++++++++++++++++++++++++  */
-.contatos {
-    background: rgb(255, 234, 47);
-    padding-top: 100px;
+.contatos {background: rgba(255, 234, 47, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
+    padding-top: 60px;
+}
+.contatos .container{background: rgba(255, 0, 0, 0);
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contatos .container article{background: rgba(255, 255, 0, 0);
+    width: 50%;
+}
+.contatos .container aside{background: rgba(0, 128, 0, 0);
+    width: 50%;
 }
 
 /*  ++++++++++++++++++++++++++++  SEÇÃO FOOTER  +++++++++++++++++++++++++++++++  */
