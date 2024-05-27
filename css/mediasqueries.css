@@ -1,61 +1,119 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 0px) and (max-width: 1023px){
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+/*  VARIÁVEIS DE CSS3 e CONFIGURAÇÕES GERAIS */
+:root{
+    --dsk-titulo-h1: 5em;
+    --dsk-titulo-h2: 3em;
+    --dsk-titulo-h3: 2.5em;
+    --dsk-paragrafo: 1.3em;
 
+    --mbl-titulo-h1: 1.5em;
+    --mbl-titulo-h2: 1.3em;
+    --mbl-paragrafo: 1em;
+
+    --azul: #3A6298;
+    --grena: #BE2A29;
+    --preto: #000000;
+    --branco: #FFFFFF;
+}
+/*  RESPONSIVIDADE MOBILE (0px - 767px)  */
+@media (max-width: 767px){
+    
     body{
-        background: rgb(230, 230, 230);
+        background: rgb(255, 255, 255);
     }
-    header nav{background: rgb(0, 0, 0);
-        height: 170px;
-        margin: auto;        
-    }
-    header nav{background: red;
-        margin: auto;
-        width: 70%;
+    /*   ----------  SECTION HEADER  ----------  */
+    header{
+        background: #00000000; 
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         height: 70px;
+        margin: auto;
+        padding: 0 5%;
     }
-    header nav .logo a h1{ background: greenyellow;
-        font-size: var(--mbl-titulo-h1);
+    header .logo a img{
+        max-width: 40%;
+        margin: 30px 0;
     }
-    header nav .logo a h3{ background: rebeccapurple;
-        font-size: 1rem;
+    header .logo_mbl a img{
+        display: none;
     }
-    header nav .menu{ background-color: rgb(0, 255, 170);
+    header .menu.active{
+        right: 0;
+    }
+    header .menu .close-btn{        
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 83%;
+        margin: 21px 0px 0px 0px;
+    }
+    header nav{
+        position: fixed;
+        background: rgb(160, 40, 40);
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 50px;
-    }
-    header nav #burguer{
-        display: block;         
-    }
-    header nav .menu ul { background:rgb(255, 0, 0);
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        max-width: 90%;
-        width: 100%;
-        /*background:rgb(255, 255, 255);*/
+        align-items: flex-end;
         flex-direction: column;
+        min-width: 50%;
+        height: 100vh;
+        top: 0;
+        right: -110%;
+        padding: 80px 20px;
+        transition:  0.5s;
+        transition-property: right;
+    }
+    header nav a {
         display: block;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100px;
+        font-size: 2rem;
+        margin: 5px;
+        padding: 0 15px;
+        color: var(--branco);
+        font-weight: 500;
+    }
+    header nav a:hover {
+        color: #b7b7b7;
+    }
+    header .button {
         display: none;
     }
-    header nav .menu ul li  a{background: rgba(255, 0, 0, 0.084);
+    header .btn{
         display: block;
-        justify-content: center;
-        align-items: center;
-        margin: 0px 0px 0px 0;
-        padding: 0px 0 ;
-        line-height: 100px;
-        font-size: 2em;
+        font-size: 1.5rem;
+        color: var(--azul);
     }
-
-    header nav #btn1{
+    header.sticky{
+        height: 60px;
+        background: var(--azul);
+        box-shadow: 0px 5px 5px 0px #0000006a;
+        border-bottom: #a51212 solid 5px;
+        transition: all .2s ease;
+    }
+    header.sticky .logo{
         display: none;
+    }
+    header.sticky .logo_mbl a img{
+        display: block;
+        width: 10%;
+    }
+    header.sticky .btn{
+        display: block;
+        color: white;
     }
 
 
@@ -74,7 +132,7 @@
     .home aside img{
         display: flex;
         justify-content: center;
-        width: 100%;
+        width: 90%;
         margin: auto;
     }
     .home article{
@@ -103,11 +161,26 @@
         align-items: center;
         margin-top: 100px;
         padding: 0 20px 5px 15px;
+    }    
+    /*   ----------  SECTION PRODUTOS  ----------  */
+    .produtos{
+        display: none;
     }
-    
-    /*   ----------  SECTION SOBRE  ----------  */
+    /*   ----------  SECTION SERVIÇOS  ----------  */
+    .servicos{
+        display: none;
+    }
+    /*   ----------  SECTION BENEFÍCIOS  ----------  */
+    .beneficios{
+        display: none;
+    }
+    /*   ----------  SECTION DEPOIMENTOS  ----------  */
+    .depoimentos{
+        display: none;
+    }
+    /*   ----------  SECTION EMPRESA  ----------  */
     .empresa {
-        display: flex;
+        display: none;
         flex-direction: column-reverse;
         width: 100%;
         height: 100vh;
@@ -123,12 +196,13 @@
     .empresa aside img {
         width: 100%;
     }
-
-
-
+    /*   ----------  SECTION CONTATOS  ----------  */
+    .contatos{
+        display: none;
+    }
 
     footer {
-        background: rgb(0, 0, 166);
+        background: black;
         display: flex;
         justify-content: center;
         align-items: center;
