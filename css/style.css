@@ -52,13 +52,11 @@ header nav .menu.active{
 header .btn{
     display: none;
 }
-header .logo{
-    width: 30%;
-    margin: 10px 0;
-    padding: 10px 0;
+header .logo a img{
+    width: 15%;
 }
-header .logo img {
-    width: 50%;
+header .logo_mbl a img{
+    display: none;
 }
 header nav{
     background: rgba(255, 0, 0, 0);
@@ -87,7 +85,7 @@ header nav a:hover{
 header nav .botao a {
     background: green;
     margin: 0 0 0 20px;
-    padding: 5px 50px;
+    padding: 5px 30px;
     border-radius: 5px;
     color: white;
 }
@@ -96,11 +94,24 @@ header nav .botao a:hover{
     color: rgb(255, 255, 255);
 }
 header.sticky{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 70px;
     background: var(--azul);
     box-shadow: 0px 10px 10px 0px #ff000077;
     border-bottom: var(--grena) solid 5px;
     transition: all .1s ease;
+}
+header.sticky .logo a img{
+    display: none;
+}
+header.sticky .logo_mbl a img{
+    background: rgba(255, 0, 0, 0);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
 }
 header.sticky nav a{
     color: var(--branco);
