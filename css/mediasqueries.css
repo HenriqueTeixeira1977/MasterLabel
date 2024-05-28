@@ -8,6 +8,8 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+    transition: all .3s ease;
+
 }
 /*  VARIÁVEIS DE CSS3 e CONFIGURAÇÕES GERAIS */
 :root{
@@ -161,11 +163,26 @@
     }    
     /*   ----------  SECTION PRODUTOS  ----------  */
     .produtos{
-        display: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .produtos .title h2{
+        font-size: 1.5rem;
+    }
+    .produtos .container{background: rgba(255, 0, 0, 0);
+        width: 95%;
+        height: 100%;
+
+    }
+    .produtos .container .card{background: rgb(255, 255, 255);
+        width: 95%;
     }
     /*   ----------  SECTION SERVIÇOS  ----------  */
     .servicos{background: rgba(255, 0, 0, 0);
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -191,11 +208,18 @@
         margin: auto;
         padding: 0;
     }
-    .servicos .container aside img{
+    .servicos .container aside{background: rebeccapurple;
+        display: flex;
+        justify-content: center;
+
+    }
+    .servicos .container aside img{background: red;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+
+        width: 70%;
     }
     /*   ----------  SECTION BENEFÍCIOS  ----------  */
     .beneficios{
