@@ -8,6 +8,8 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+    transition: all .3s ease;
+
 }
 /*  VARIÁVEIS DE CSS3 e CONFIGURAÇÕES GERAIS */
 :root{
@@ -270,13 +272,21 @@ main{background: rgba(255, 0, 0, 0);
     padding-top: 60px;
 }
 .servicos .container{background: rgba(255, 0, 0, 0.421);
-    margin: 0 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 10%;
 }
-.servicos .container article{background: rgba(255, 255, 0, 0);
+.servicos .container .card{background: rgb(255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
+    max-width: 350px;
+    height: 500px;
+    margin: 10px;
+    padding: 20px;
+    gap: 1;
 }
 .servicos .container aside{background: rgba(0, 128, 0, 0);
     width: 50%;
